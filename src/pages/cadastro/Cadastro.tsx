@@ -22,12 +22,12 @@ function Cadastro() {
 
     useEffect(() => {
         if (usuario.id !== 0) {
-            retornar()
+            retornar();
         }
     }, [usuario]);
 
     function retornar() {
-        navigate('/login');
+        navigate('/');
     }
 
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
@@ -151,7 +151,7 @@ function Cadastro() {
                             type="submit"
                             className="rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2 flex justify-center"
                         >
-                            { isLoading ?
+                            {isLoading ?
                                 <ClipLoader
                                     color="#ffffff"
                                     size={24}
